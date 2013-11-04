@@ -434,7 +434,7 @@ function runFuncAppTests(cmd, callback) {
     async.forEachSeries(descriptors, function(des, callback) {
         var appConfig = JSON.parse(fs.readFileSync(des, 'utf8')),
             app = appConfig[0].config.application,
-            port = cmd.port || 8666,
+            port = cmd.port || 10098,
             param = app.param || null,
             type = app.type || 'mojito';
 
