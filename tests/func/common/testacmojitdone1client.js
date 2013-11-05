@@ -8,7 +8,26 @@ YUI.add('acmojitdone1client-tests', function (Y) {
     suite.add(new Y.Test.Case({
 
         "test acmojitdone1client": function() {
-            var that = this;
+            var that = this,
+                url = 'http://screwdriver2.cocktails.corp.gq1.yahoo.com:10099';
+                params = {},
+                config = {};
+
+            /*
+            Y.mojito.lib.REST.GET(url, params, config, function(err, response) {
+                that.wait(function () {
+                    Y.Assert.areEqual('Hello World', response);
+                });
+            });
+            */
+            console.log('Y: ' + Y);
+            Y.log('Y: ' + Y);
+            // Y.error('Y: ' + Y);
+            Object.keys(Y).forEach(function (key) {
+                console.log('Y.' + key);
+                Y.log('Y.' + key);
+                // Y.error('Y.' + key);
+            });
             Y.one('#testcase > option[value="done1"]').set('selected','selected'); 
             Y.one('#acMojitButton').simulate('click');
             that.wait(function(){
