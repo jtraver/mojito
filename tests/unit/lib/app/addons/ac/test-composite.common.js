@@ -4,6 +4,7 @@
  * See the accompanying LICENSE file for terms.
  */
 
+console.log('\n\test-composite.common.js');
 
 /*jslint anon:true, sloppy:true, nomen:true, node:true*/
 /*global YUI*/
@@ -23,6 +24,8 @@ YUI().use('mojito-composite-addon', 'test', function(Y) {
         name: 'composite tests',
 
         'test no-arg done calls execute with children': function() {
+            Y.log('\n\ntest no-arg done calls execute with children');
+            console.log('\n\ntest no-arg done calls execute with children');
             var command = {
                     instance: {
                         config: {

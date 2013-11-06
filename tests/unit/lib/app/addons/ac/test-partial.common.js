@@ -3,6 +3,9 @@
  * Copyrights licensed under the New BSD License.
  * See the accompanying LICENSE file for terms.
  */
+
+console.log('\n\test-partial.common.js');
+
 YUI().use('mojito-partial-addon', 'test', function (Y) {
 
     var suite = new Y.Test.Suite('mojito-partial-addon tests'),
@@ -33,6 +36,8 @@ YUI().use('mojito-partial-addon', 'test', function (Y) {
         },
 
         'test callback called with error when view is not found': function() {
+            Y.log('\ntest callback called with error when view is not found');
+            console.log('\ntest callback called with error when view is not found');
             var command = {
                     instance: {
                         views: {}

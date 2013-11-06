@@ -5,6 +5,8 @@
  * See the accompanying LICENSE file for terms.
  */
 
+console.log('\n\test-assets.common.js');
+
 /*jslint anon:true, sloppy:true, nomen:true, node:true*/
 /*global YUI*/
 
@@ -38,6 +40,8 @@ YUI().use('mojito-assets-addon', 'test', 'array-extras', function(Y, NAME) {
         },
 
         'test one top css with type and location': function() {
+            Y.log('\n\ntest one top css with type and location');
+            console.log('\n\ntest one top css with type and location');
             var css, result;
 
             css = '<style>.foo { color:red; }</style>';

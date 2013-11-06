@@ -3,6 +3,9 @@
  * Copyrights licensed under the New BSD License.
  * See the accompanying LICENSE file for terms.
  */
+
+console.log('\n\test-http.server.js');
+
 YUI().use('mojito-http-addon', 'test', function (Y) {
 
     var suite = new Y.Test.Suite('mojito-http-addon tests'),
@@ -14,6 +17,8 @@ YUI().use('mojito-http-addon', 'test', function (Y) {
         name: 'all functions',
 
         'getRequest and getResponse use adapter request and response': function() {
+            Y.log('\n\ngetRequest and getResponse use adapter request and response');
+            console.log('\n\ngetRequest and getResponse use adapter request and response');
             var addon = new Y.mojito.addons.ac.http(null, {
                 req: 'req',
                 res: 'res'

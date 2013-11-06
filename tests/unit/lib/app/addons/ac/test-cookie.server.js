@@ -4,6 +4,7 @@
  * See the accompanying LICENSE file for terms.
  */
 
+console.log('\n\test-cookie.server.js');
 
 /*jslint anon:true, sloppy:true, nomen:true, node:true*/
 /*global YUI*/
@@ -20,6 +21,8 @@ YUI().use('mojito-cookie-addon', 'test', function(Y) {
     suite.add(new Y.Test.Case({
 
         'test set cookie': function() {
+            Y.log('test set cookie');
+            console.log('test set cookie');
             var headerAdded = false,
                 c = new Y.mojito.addons.ac.cookie(null, null, {
                     http: {

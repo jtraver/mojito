@@ -3,6 +3,9 @@
  * Copyrights licensed under the New BSD License.
  * See the accompanying LICENSE file for terms.
  */
+
+console.log('\n\test-models.common.js');
+
 YUI().use('mojito-models-addon', 'test', function(Y) {
 
     var suite = new Y.Test.Suite('mojito-models-addon tests'),
@@ -13,6 +16,8 @@ YUI().use('mojito-models-addon', 'test', function(Y) {
         name: 'model tests',
 
         'invalid model name': function () {
+            Y.log('\n\ninvalid model name');
+            console.log('\n\ninvalid model name');
             var adapter = {
                 page: {}
             };

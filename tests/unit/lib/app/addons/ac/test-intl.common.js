@@ -3,6 +3,9 @@
  * Copyrights licensed under the New BSD License.
  * See the accompanying LICENSE file for terms.
  */
+
+console.log('\n\test-intl.common.js');
+
 YUI().use('mojito-intl-addon', 'test', 'datatype-date', function(Y) {
 
     var suite = new Y.Test.Suite('mojito-intl-addon tests'),
@@ -14,6 +17,8 @@ YUI().use('mojito-intl-addon', 'test', 'datatype-date', function(Y) {
         name: 'intl tests',
 
         'test lang() gets translation from Y.Intl': function() {
+            Y.log('\n\ntest lang() gets translation from Y.Intl');
+            console.log('\n\ntest lang() gets translation from Y.Intl');
             var command = {},
                 adapter = null,
                 ac = {

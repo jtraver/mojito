@@ -4,6 +4,7 @@
  * See the accompanying LICENSE file for terms.
  */
 
+console.log('\n\test-deploy.server.js');
 
 YUI().use('mojito-deploy-addon', 'test', 'json-parse', function(Y) {
     var suite = new Y.Test.Suite('mojito-deploy-addon tests'),
@@ -35,6 +36,8 @@ YUI().use('mojito-deploy-addon', 'test', 'json-parse', function(Y) {
 
 
         'YUI.applyConfig() should use application.json yui.config': function() {
+            Y.log('\n\nYUI.applyConfig() should use application.json yui.config');
+            console.log('\n\nYUI.applyConfig() should use application.json yui.config');
             var blobs = [];
             var assetHandler = {
                     addCss: function(path, location) {

@@ -4,6 +4,7 @@
  * See the accompanying LICENSE file for terms.
  */
 
+console.log('\n\test-cookie.client.js');
 
 /*jslint anon:true, sloppy:true, nomen:true, node:true*/
 /*global YUI*/
@@ -37,6 +38,8 @@ YUI({useBrowserConsole: true}).use(
             },
 
             "test constructor": function() {
+                Y.log("\n\ntest constructor");
+                console.log("\n\ntest constructor");
                 A.isNotNull(addon);
             },
 

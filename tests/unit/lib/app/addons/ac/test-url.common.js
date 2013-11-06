@@ -3,6 +3,9 @@
  * Copyrights licensed under the New BSD License.
  * See the accompanying LICENSE file for terms.
  */
+
+console.log('\n\test-url.common.js');
+
 YUI().use('mojito-url-addon', 'test', 'querystring', function(Y) {
 
     var suite = new Y.Test.Suite('mojito-url-addon tests'),
@@ -35,6 +38,8 @@ YUI().use('mojito-url-addon', 'test', 'querystring', function(Y) {
         },
 
         'test find url (get)': function() {
+            Y.log('\n\ntest find url (get)');
+            console.log('\n\ntest find url (get)');
             Y.mojito.RouteMaker = function(rtes) {
                 A.areSame('routes', rtes);
                 return {

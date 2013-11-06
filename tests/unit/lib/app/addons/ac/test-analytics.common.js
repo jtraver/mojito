@@ -4,6 +4,7 @@
  * See the accompanying LICENSE file for terms.
  */
 
+console.log('\n\test-analytics.common.js');
 
 /*jslint anon:true, sloppy:true, nomen:true, node:true*/
 /*global YUI*/
@@ -20,6 +21,8 @@ YUI().use('mojito-analytics-addon', 'test', function(Y) {
     suite.add(new Y.Test.Case({
 
         'test setMergeFunction': function() {
+            Y.log('\n\test setMergeFunction');
+            console.log('\n\test setMergeFunction');
             var analyticsValue1 = {'foo': 'bar'},
                 analyticsValue2 = {'foo': 'baz'},
                 testStore = {},

@@ -4,6 +4,7 @@
  * See the accompanying LICENSE file for terms.
  */
 
+console.log('\n\test-config.common.js');
 
 /*jslint anon:true, sloppy:true, nomen:true, node:true*/
 /*global YUI*/
@@ -37,6 +38,8 @@ YUI().use('mojito-config-addon', 'test', function(Y) {
         name: 'config tests',
 
         'test get(key) //one config': function() {
+            Y.log('\n\ntest get(key) //one config');
+            console.log('\n\ntest get(key) //one config');
             var cf = {a: 1, b: 2},
                 ac = create(cf, null);
 

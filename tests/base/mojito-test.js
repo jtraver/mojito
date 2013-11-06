@@ -4,6 +4,7 @@
  * See the accompanying LICENSE file for terms.
  */
 
+console.log('\n\nbase/mojito-test.js');
 
 /*jslint anon:true, sloppy:true, nomen:true, node:true, unparam: true, todo: true*/
 /*global YUI*/

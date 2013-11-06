@@ -145,6 +145,7 @@ function startPhantomjs(cmd, callback) {
             command = "phantomjs";
             commandArgs = ["--webdriver=" + port];
         }
+	// commandArgs.push("--logLevel=debug");
         p = runCommand(cwd, command, commandArgs, function() {
             // If this command returns called, then it failed to launch
             if (timeout) {
@@ -197,9 +198,12 @@ function runUnitTests(cmd, callback) {
     if (phantomjsport) {
         commandArgs.push('--phantomHost=http://localhost:' + phantomjsport + '/wd/hub');
     }
+    commandArgs.push("--logLevel=trace");
+/*
     if (cmd.logLevel) {
         commandArgs.push('--logLevel=' + cmd.logLevel);
     }
+*/
     if (cmd.browser) {
         commandArgs.push('--browser=' + cmd.browser);
     }
@@ -344,9 +348,12 @@ function runFuncTests(cmd, desc, port, thispid, callback) {
     if (remoteselenium) {
         commandArgs.push('--seleniumHost=' + remoteselenium);
     }
+    commandArgs.push("--logLevel=trace");
+/*
     if (cmd.logLevel) {
         commandArgs.push('--logLevel=' + cmd.logLevel);
     }
+*/
     if (cmd.browser) {
         commandArgs.push('--browser=' + cmd.browser);
     }
@@ -489,7 +496,10 @@ function finalize(err, results) {
 
 function test(cmd) {
     var series = [];
+/*
     cmd.logLevel = cmd.logLevel || 'WARN';
+*/
+    cmd.logLevel = 'TRACE';
     // Default to all tests
 
     cmd.browser = cmd.browser || 'firefox';

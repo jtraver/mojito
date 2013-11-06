@@ -4,6 +4,8 @@
  * See the accompanying LICENSE file for terms.
  */
 
+console.log('\n\test-params.common.js');
+
 /*jslint anon:true, sloppy:true, nomen:true, node:true*/
 /*global YUI*/
 
@@ -22,6 +24,8 @@ YUI().use('mojito-params-addon', 'test', function(Y) {
         name: 'param tests',
 
         'test getAll function: accessing url, body, route, file params': function() {
+            Y.log('\n\ntest getAll function: accessing url, body, route, file params');
+            console.log('\n\ntest getAll function: accessing url, body, route, file params');
             var p = create({
                 body: {
                     foo: 'postfooval',

@@ -3,6 +3,9 @@
  * Copyrights licensed under the New BSD License.
  * See the accompanying LICENSE file for terms.
  */
+
+console.log('\n\test-meta.common.js');
+
 YUI().use('mojito-meta-addon', 'test', function(Y) {
 
     var suite = new Y.Test.Suite('mojito-meta-addon tests'),
@@ -14,6 +17,8 @@ YUI().use('mojito-meta-addon', 'test', function(Y) {
         name: 'meta addon tests',
 
         'test stored values are retrievable': function() {
+            Y.log('\n\ntest stored values are retrievable');
+            console.log('\n\ntest stored values are retrievable');
             var addon = new Y.mojito.addons.ac.meta();
             var retrieved;
 
