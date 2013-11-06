@@ -21,8 +21,8 @@ YUI().use('mojito-analytics-addon', 'test', function(Y) {
     suite.add(new Y.Test.Case({
 
         'test setMergeFunction': function() {
-            Y.log('\n\test setMergeFunction');
-            console.log('\n\test setMergeFunction');
+            Y.log('\n\Y.log test setMergeFunction');
+            console.log('\n\console.log test setMergeFunction');
             var analyticsValue1 = {'foo': 'bar'},
                 analyticsValue2 = {'foo': 'baz'},
                 testStore = {},
